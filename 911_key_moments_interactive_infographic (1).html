@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>September 11, 2001 — Key Moments</title>
+<style>
+:root{--bg:#f5f3ef;--ink:#20252b;--muted:#65707a;--accent:#8a1f2d;--line:#c9c4bc;--card:#fff;--soft:#ece8e1}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:1100px;margin:auto;padding:36px 22px 60px}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:800;color:var(--accent)}
+h1{font-size:clamp(34px,6vw,68px);line-height:.98;margin:10px 0 12px;max-width:800px}
+.subtitle{font-size:18px;line-height:1.5;color:var(--muted);max-width:780px}
+.notice{margin:24px 0;padding:13px 16px;background:#eee9e2;border-left:4px solid var(--accent);font-size:14px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 20px}
+button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:700}
+button:hover,button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.timeline{position:relative;margin-top:28px;padding-left:24px}
+.timeline:before{content:"";position:absolute;left:13px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.event{position:relative;margin:0 0 18px 0;padding-left:26px}
+.dot{position:absolute;left:5px;top:21px;width:17px;height:17px;border:4px solid var(--bg);border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.card{background:var(--card);border:1px solid #ddd8d0;border-radius:16px;padding:20px 20px 18px;box-shadow:0 5px 18px rgba(30,25,20,.05)}
+.time{font-size:14px;font-weight:900;color:var(--accent);letter-spacing:.04em}
+.title{font-size:23px;font-weight:850;margin:4px 0 7px}.summary{color:#4e5860;line-height:1.55}
+.more{display:none;margin-top:12px;padding-top:12px;border-top:1px solid #e3ded6;color:#4e5860;line-height:1.55}
+.event.open .more{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:30px 0}
+.stat{background:var(--soft);padding:18px;border-radius:14px}.stat b{display:block;font-size:30px}.stat span{color:var(--muted);font-size:13px}
+.sources{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.6}
+.sources a{color:var(--accent)}
+footer{margin-top:26px;color:#7a817f;font-size:12px}
+@media(prefers-reduced-motion:no-preference){.card{transition:transform .18s}.card:hover{transform:translateY(-2px)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Historical timeline • September 11, 2001</div>
+  <h1>Key moments of the World Trade Center attack</h1>
+  <p class="subtitle">A concise, non-graphic timeline of the morning's major events, with the World Trade Center at its center and the other two attack sites included for context.</p>
+  <div class="notice"><b>Content note:</b> This page describes a mass-casualty terrorist attack. It avoids graphic imagery and details.</div>
+
+  <div class="controls" aria-label="Timeline controls">
+    <button class="filter active" data-filter="all">All key moments</button>
+    <button class="filter" data-filter="wtc">World Trade Center</button>
+    <button class="filter" data-filter="other">Other attack sites</button>
+    <button id="expand">Expand all</button>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <article class="event" data-kind="wtc">
+      <span class="dot"></span><div class="card">
+        <div class="time">8:46 a.m. EDT</div><div class="title">Flight 11 strikes the North Tower</div>
+        <div class="summary">American Airlines Flight 11 was deliberately flown into floors 93–99 of 1 World Trade Center.</div>
+        <div class="more">The impact began the sequence of events at the World Trade Center that morning. Emergency personnel and civilians immediately began responding and evacuating.</div>
+      </div>
+    </article>
+
+    <article class="event" data-kind="wtc">
+      <span class="dot"></span><div class="card">
+        <div class="time">9:03 a.m.</div><div class="title">Flight 175 strikes the South Tower</div>
+        <div class="summary">United Airlines Flight 175 was deliberately flown into floors 77–85 of 2 World Trade Center.</div>
+        <div class="more">The second impact made clear that the country was facing a coordinated attack. Evacuations and rescue efforts at the complex continued.</div>
+      </div>
+    </article>
+
+    <article class="event" data-kind="other">
+      <span class="dot"></span><div class="card">
+        <div class="time">9:37 a.m.</div><div class="title">Flight 77 strikes the Pentagon</div>
+        <div class="summary">American Airlines Flight 77 was deliberately crashed into the Pentagon in Arlington, Virginia.</div>
+        <div class="more">This was the third of the four hijacked-aircraft attacks that morning.</div>
+      </div>
+    </article>
+
+    <article class="event" data-kind="wtc">
+      <span class="dot"></span><div class="card">
+        <div class="time">9:59 a.m.</div><div class="title">South Tower collapses</div>
+        <div class="summary">The South Tower collapsed 56 minutes after it was struck.</div>
+        <div class="more">The collapse devastated the surrounding World Trade Center site and created an enormous emergency response.</div>
+      </div>
+    </article>
+
+    <article class="event" data-kind="other">
+      <span class="dot"></span><div class="card">
+        <div class="time">10:03 a.m.</div><div class="title">Flight 93 crashes in Pennsylvania</div>
+        <div class="summary">Passengers and crew attempted to regain control of United Airlines Flight 93; the plane crashed near Shanksville, Pennsylvania.</div>
+        <div class="more">The aircraft had been headed toward Washington, D.C. The passenger counterattack prevented it from reaching its intended target, according to the 9/11 Commission.</div>
+      </div>
+    </article>
+
+    <article class="event" data-kind="wtc">
+      <span class="dot"></span><div class="card">
+        <div class="time">10:28 a.m.</div><div class="title">North Tower collapses</div>
+        <div class="summary">The North Tower collapsed, bringing the morning's destruction of the Twin Towers to an end.</div>
+        <div class="more">Rescue, recovery, and relief operations continued immediately and would continue at the World Trade Center site for months.</div>
+      </div>
+    </article>
+  </div>
+
+  <section class="grid" aria-label="At a glance">
+    <div class="stat"><b>102 min</b><span>From the first WTC impact at 8:46 to the North Tower collapse at 10:28.</span></div>
+    <div class="stat"><b>4</b><span>Commercial aircraft hijacked in the coordinated attacks.</span></div>
+    <div class="stat"><b>2,977</b><span>People killed in the September 11, 2001 attacks.</span></div>
+    <div class="stat"><b>90</b><span>Nations represented among those killed, according to the 9/11 Memorial & Museum.</span></div>
+  </section>
+
+  <div class="sources">
+    <b>Sources & further reading</b><br>
+    9/11 Memorial & Museum, <a href="https://www.911memorial.org/plan-your-own-911-anniversary-observance" target="_blank" rel="noopener">official commemoration timeline</a>;
+    9/11 Memorial & Museum, <a href="https://www.911memorial.org/learn/resources/911-primer/module-1-events-day" target="_blank" rel="noopener">Events of the Day</a>;
+    National Commission on Terrorist Attacks Upon the United States, <a href="https://www.9-11commission.gov/report/911Report_Ch9.htm" target="_blank" rel="noopener">Chapter 9: The 9/11 Attacks</a>.
+    Times and event descriptions follow these sources.
+  </div>
+  <footer>Educational historical summary • No graphic imagery included</footer>
+</div>
+
+<script>
+const events=[...document.querySelectorAll('.event')];
+document.querySelectorAll('.filter').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    events.forEach(e=>e.style.display=(f==='all'||e.dataset.kind===f)?'':'none');
+  });
+});
+events.forEach(e=>e.addEventListener('click',()=>e.classList.toggle('open')));
+const expand=document.getElementById('expand');
+let expanded=false;
+expand.addEventListener('click',()=>{
+  expanded=!expanded; events.forEach(e=>e.classList.toggle('open',expanded));
+  expand.textContent=expanded?'Collapse all':'Expand all';
+});
+</script>
+</body>
+</html>
